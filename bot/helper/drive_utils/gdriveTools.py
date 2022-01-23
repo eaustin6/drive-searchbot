@@ -125,9 +125,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'Drive Search',
-                                 author_name='drive-searchbot',
-                                 author_url='https://github.com/breakdowns/drive-searchbot',
+                                 title = 'Sito Cloud',
+                                 author_name='Sito Mao',
+                                 author_url='https://t.me/sito_mao',
                                  html_content=content)
         return
 
@@ -139,7 +139,7 @@ class GoogleDriveHelper:
             response = self.drive_query(parent_id, fileName)
             if response:
                 if add_title_msg:
-                    msg = f'<h3>Search Results for: {fileName}</h3><br>drive-searchbot<br><br>'
+                    msg = f'<h3>Search Results for: {fileName}</h3><br>Sito Cloud Zone<br><br>'
                     add_title_msg = False
                 msg += f"╾────────────╼<br><b>{DRIVE_NAME[INDEX]}</b><br>╾────────────╼<br>"
                 for file in response:
